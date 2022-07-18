@@ -1,0 +1,46 @@
+.SelectTip {
+    max-width: 373px ;
+    display: flex;
+    margin: 23px auto 24px auto;
+    flex-direction : column;
+}
+
+.selecttip-title {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color: #5E7A7D; 
+    flex-basis: 100%;
+}
+
+.selecttip-values {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.selecttip-custom {
+    box-sizing: border-box;
+    text-align: center;
+    width: 117px;
+    height: 48px;
+    background-color: #F3F9FA ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    color: #00474B;
+    font-size: 24px;
+    font-weight: 700;
+    border: none;
+}
+
+.selecttip-custom:focus {
+    border: 2px solid #26C2AE;
+    outline: none;
+    transition: all 0.05s;
+}
+
+.selecttip-custom::placeholder {
+
+}

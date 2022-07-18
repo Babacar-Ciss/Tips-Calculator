@@ -1,0 +1,16 @@
+.ResetButton {
+    margin: 140px auto;
+}
+
+.button-reset {
+    width: 333px;
+    height: 48px;
+    background-color: #9FE8DF ;
+    color:#00474B ;
+    font-weight: 700;
+    font-size: 20px;
+    text-align: center;
+    font-family: "Space Mono";
+    border: none;
+    border-radius: 5px ;
+}

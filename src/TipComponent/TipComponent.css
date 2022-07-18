@@ -1,0 +1,22 @@
+.TipComponent {
+    box-sizing: border-box;
+    width: 119px;
+    height: 48px;
+    background-color: #00474B ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    color: #FFF;
+    font-size: 24px;
+    font-weight: 700;
+    flex-basis: 30.83%;
+    margin-bottom: 16px ;
+    cursor: pointer;
+}
+
+.TipComponent:hover {
+    background-color: #9FE8DF;
+    color: #00474B;
+    transition: all 0.2s;
+}

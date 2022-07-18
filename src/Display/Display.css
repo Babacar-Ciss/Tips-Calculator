@@ -1,0 +1,15 @@
+.Display {
+    background-color: #FFF;
+    flex: 1 1;
+}
+
+.display-container {
+    display: flex;
+    flex-direction: column;
+    width: 413px;
+    height: 417px;
+    margin: 32px auto;
+    background-color: #00474B;
+    border-radius: 15px;
+
+}

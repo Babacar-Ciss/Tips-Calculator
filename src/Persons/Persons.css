@@ -1,0 +1,57 @@
+.Persons{
+    width: 379px;
+    margin: 0 auto;
+    font-family: "Space Mono";
+}
+
+.persons-input {
+  margin-top: 20px;
+  color: #5E7A7D;
+  font-size: 24px;
+}
+
+.persons-label{
+    display: block;
+    position: relative;
+    color: #5E7A7D;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.persons-value{
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    height: 49.7px;
+    background-color: #F3F9FA ;
+    border: none;
+    border-radius: 5px;
+    text-align: right;
+    padding-right: 17px; 
+    font-family: "Space Mono";
+    font-size: inherit;
+    color: #00474B;
+    appearance: none;
+}
+
+.persons-value::placeholder{
+    color: #5E7A7D;
+    font-size: 24px;
+    font-family: "Space Mono";
+    padding-right: 17px; 
+}
+
+.persons-value:focus{
+    border: 2px solid#26C2AE;
+    outline: none;
+    transition: all 0.05s;
+}
+
+
+.persons-label::after {
+    content: url(/public/assets/images/icon-person.svg);
+    z-index: 10;
+    position: absolute;
+    top: 46px;
+    left: 20px;
+}
