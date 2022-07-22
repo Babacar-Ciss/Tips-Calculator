@@ -15,8 +15,15 @@
     cursor: pointer;
 }
 
-.TipComponent:hover {
-    background-color: #9FE8DF;
+.active {
+    background: #9FE8DF;
     color: #00474B;
-    transition: all 0.2s;
+    transition: all .2s;
+}
+
+@media only screen and (max-width : 375px) {
+    .TipComponent {
+        flex-basis: 47.1%;
+        margin-bottom: 16px ;
+    }
 }

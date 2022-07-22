@@ -3,3 +3,10 @@
     background-color: #FFF;
     flex: 1 1;
 } 
+
+@media only screen and (max-width : 375px) {
+    .Input {
+        width: 311px;
+        margin: 0 auto;
+    } 
+}

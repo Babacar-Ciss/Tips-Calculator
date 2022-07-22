@@ -54,3 +54,16 @@
     top: 46px;
     left: 20px;
 }
+
+
+
+@media only screen and (max-width : 375px) {
+    .InputTipValue{
+        width: 100%;
+        margin: 32px auto 0 auto;
+    }
+
+
+      
+
+}

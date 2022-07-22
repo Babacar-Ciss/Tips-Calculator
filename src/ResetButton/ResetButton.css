@@ -5,7 +5,7 @@
 .button-reset {
     width: 333px;
     height: 48px;
-    background-color: #9FE8DF ;
+    background-color: #26C2AE ;
     color:#00474B ;
     font-weight: 700;
     font-size: 20px;
@@ -13,4 +13,40 @@
     font-family: "Space Mono";
     border: none;
     border-radius: 5px ;
+    cursor: pointer;
+    transition: all .2sh;
+}
+
+.button-reset-diseable {
+    width: 333px;
+    height: 48px;
+    background-color: #0D686D ;
+    color:#00474B ;
+    font-weight: 700;
+    font-size: 20px;
+    text-align: center;
+    font-family: "Space Mono";
+    border: none;
+    border-radius: 5px ;
+    cursor: not-allowed;
+    transition: all .2s;
+}
+
+
+
+
+
+
+.button-reset:hover{
+    background-color: #9FE8DF ;
+}
+
+@media only screen and (max-width : 375px) {
+    .ResetButton {
+        margin: 42px auto;
+    }
+
+    .button-reset {
+        width: 281px;
+    } 
 }

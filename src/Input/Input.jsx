@@ -3,13 +3,13 @@ import InputTipValue from "../InputTipValue/InputTipValue";
 import SelectTip from "../SelectTip/SelectTip";
 import Persons from "../Persons/Persons";
 
-const Input = () => {
+const Input = ({changeBill, tipRateSelected,personHandler}) => {
 
     return(
         <div className="Input">
-            <InputTipValue />
-            <SelectTip />
-            <Persons />
+            <InputTipValue changedBill={changeBill} />
+            <SelectTip tipRateSelected={tipRateSelected} />
+            <Persons personHandler= {personHandler} />
         </div>
     )
 }

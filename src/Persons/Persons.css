@@ -55,3 +55,12 @@
     top: 46px;
     left: 20px;
 }
+
+@media only screen and (max-width : 375px) {
+    .Persons{
+        width: 100%;
+        margin: 0 auto;
+        font-family: "Space Mono";
+    }
+     
+}

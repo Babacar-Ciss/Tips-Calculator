@@ -41,6 +41,20 @@
     transition: all 0.05s;
 }
 
-.selecttip-custom::placeholder {
+@media only screen and (max-width : 375px) {
+    .SelectTip {
+        max-width: 100% ;
+        margin: 15px auto -4px auto;
+    }
 
+    .selecttip-values {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    
+    .selecttip-custom {
+        width: 146px;
+        height: 50px;
+    }
 }

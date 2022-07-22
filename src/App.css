@@ -12,9 +12,19 @@
 .App-logo {
   max-width: 87px;
   height: 54px;
-  color: #3D6666;
   margin: 20px auto;
-  font-size: 15px;
-  letter-spacing: 5px;
-  font-weight: 500;
+}
+
+
+@media only screen and (max-width : 375px) {
+  .App{
+    max-width: 375px;
+    margin-top: 41px;
+    height: 789px;
+    flex-direction: column;
+  }
+
+  .App-logo {
+    margin-bottom: 41px;
+  }
 }

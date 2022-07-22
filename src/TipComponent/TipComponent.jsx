@@ -1,11 +1,22 @@
 import "./TipComponent.css";
+import { useState } from "react";
 
-const TipComponent = ({value}) => {
-
+const TipComponent = ({tipRatevalue, tipRateSelected}) => {
+    const [active, setActive] = useState(true);
+    
     return (
-        <div className="TipComponent">
-            {value}
-        </div>
+        <div>
+            {
+                active === true ? 
+                        (<div className="TipComponent" tabIndex='0'  onClick={tipRateSelected} >
+                            {tipRatevalue}%
+                        </div>)
+                       :
+                        (<div className="TipComponent " tabIndex='0' onClick={tipRateSelected}  >
+                            {tipRatevalue}%
+                        </div>)
+            }
+        </div>     
     )
 }
 

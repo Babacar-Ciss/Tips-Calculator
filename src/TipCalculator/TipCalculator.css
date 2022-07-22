@@ -27,3 +27,21 @@
     letter-spacing: -1px;
     margin-top: 119px;
 }
+
+@media only screen and (max-width : 375px) {
+    .TipCalculator {
+        width: 281px;
+        height: 48px;
+        margin-bottom: 38px;
+        margin-top: -20px;
+    }
+
+    .TipCalculator h1 {
+        font-size: 32px;
+        letter-spacing: -0.6px;
+        height: 47px;
+        display: flex;
+        align-items: center;
+
+    }
+}

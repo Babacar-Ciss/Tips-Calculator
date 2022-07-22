@@ -13,3 +13,13 @@
     border-radius: 15px;
 
 }
+
+@media only screen and (max-width : 375px) {
+    .display-container {
+        display: flex;
+        width: 327px;
+        height: 257px;
+        margin: 32px auto;
+    }
+     
+}
