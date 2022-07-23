@@ -10,14 +10,6 @@
   font-size: 24px;
 }
 
-.persons-label{
-    display: block;
-    position: relative;
-    color: #5E7A7D;
-    font-size: 16px;
-    margin-bottom: 5px;
-}
-
 .persons-value{
     box-sizing: border-box;
     display: block;
@@ -48,6 +40,20 @@
 }
 
 
+
+.persons-label-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.persons-label{
+    display: block;
+    position: relative;
+    color: #5E7A7D;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
 .persons-label::after {
     content: url(/public/assets/images/icon-person.svg);
     z-index: 10;
@@ -55,6 +61,39 @@
     top: 46px;
     left: 20px;
 }
+
+.persons-warning {
+    display: block;
+    text-align: right;
+    color: #E17457;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.person-value-warning {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    height: 49.7px;
+    background-color: #F3F9FA ;
+    border: 2px solid #E17457;
+    border-radius: 5px;
+    text-align: right;
+    padding-right: 17px; 
+    font-family: "Space Mono";
+    font-size: inherit;
+    color: #00474B;
+    appearance: none;
+}
+
+.person-value-warning:focus {
+    border: 2px solid#E17457;
+    outline: none;
+    transition: all 0.05s;
+}
+
+
+
 
 @media only screen and (max-width : 375px) {
     .Persons{

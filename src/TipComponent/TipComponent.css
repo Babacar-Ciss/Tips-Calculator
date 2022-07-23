@@ -15,6 +15,13 @@
     cursor: pointer;
 }
 
+
+.TipComponent:focus {
+    background: #9FE8DF;
+    color: #00474B;
+    transition: all .2s;
+}
+
 .active {
     background: #9FE8DF;
     color: #00474B;

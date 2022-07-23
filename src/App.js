@@ -7,12 +7,17 @@ export const ExempleContext = createContext();
 export const TotalPerPersonContext = createContext();
 
 function App() {
-  const  [valueBill, setValueBill] = useState(0);
+  let totalAmount = 0; 
+  let totalPerPerson =0;
+
+  const  [valueBill, setValueBill] = useState("");
   const  [rate, setRate] = useState(0);
-  const  [numberOfPerson, setNumberOfPerson] = useState(0);
+  const  [numberOfPerson, setNumberOfPerson] = useState("");
+  const  [selectedTipsCustom, setselectedTipsCustom] = useState("");
   
   const tipValueHandle = (e) => {
-    setRate(e.target.firstChild.data)  
+    setRate(e.target.firstChild.data);
+    setselectedTipsCustom(" ");
   }
 
   const AmountUpdater = (e) => {
@@ -23,24 +28,26 @@ function App() {
     setNumberOfPerson(e.target.value)
   }
 
+  const selectedTipsCustomHandler = (e) => {
+    setselectedTipsCustom(e.target.value)
+    setRate(" ");
+  }
+
+
   const resetState = () => {
     setNumberOfPerson(0);
     setRate(0);
-    setValueBill(0)
+    setValueBill("");
+    setNumberOfPerson("");
+    setselectedTipsCustom("");
   }
 
-
-  let totalAmount = 0; 
-  let totalPerPerson =0;
   
-  if(valueBill && rate && numberOfPerson !== 0) {
-      totalAmount =  (valueBill * rate * 0.01).toFixed(2);
-      totalPerPerson = (totalAmount / numberOfPerson).toFixed(2)
+  if(valueBill && (numberOfPerson !== 0 || selectedTipsCustom)) {
+    totalAmount =  (valueBill * (rate|selectedTipsCustom) * 0.01).toFixed(2);
+    totalPerPerson = (totalAmount / numberOfPerson).toFixed(2)
   }
   
-  console.log(totalPerPerson)
-
-  console.log(rate);
   return (
     <div>
 
@@ -50,7 +57,12 @@ function App() {
       <div className="App">
         <Input changeBill={AmountUpdater} 
                tipRateSelected={tipValueHandle}
-               personHandler = {numberOfPersonHandler}/>  
+               personHandler = {numberOfPersonHandler}
+               removeValueBill = {valueBill}
+               removeValuePerson = {numberOfPerson}
+               numberOfPerson = {numberOfPerson}
+               removeValueCustom = {selectedTipsCustom}
+               selectedTipsCustom = {selectedTipsCustomHandler} />  
 
         <ExempleContext.Provider value={totalAmount}>   
           <TotalPerPersonContext.Provider value={totalPerPerson}>

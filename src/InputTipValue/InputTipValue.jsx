@@ -1,8 +1,9 @@
 import "./InputTipValue.css"
 
-const InputTipValue = ({changedBill}) => {
+const InputTipValue = ({changedBill,removeValueBill}) => {
 
     return(
+
         <div className="InputTipValue">
             <form className="bill-input">
                 <label className="bill-label"> Bill </label>
@@ -11,6 +12,7 @@ const InputTipValue = ({changedBill}) => {
                        placeholder={0}
                        pattern="[0-9]+"
                        onChange={changedBill}
+                       value = {removeValueBill}
                        />
             </form>
             

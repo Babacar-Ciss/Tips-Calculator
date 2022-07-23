@@ -21,7 +21,8 @@
 
 .selecttip-custom {
     box-sizing: border-box;
-    text-align: center;
+    text-align: right;
+    padding-right: 13px;
     width: 117px;
     height: 48px;
     background-color: #F3F9FA ;
@@ -34,6 +35,11 @@
     font-weight: 700;
     border: none;
 }
+
+.selecttip-custom::placeholder {
+    text-align: center;
+}
+
 
 .selecttip-custom:focus {
     border: 2px solid #26C2AE;
