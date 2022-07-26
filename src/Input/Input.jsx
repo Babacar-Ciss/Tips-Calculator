@@ -3,7 +3,7 @@ import InputTipValue from "../InputTipValue/InputTipValue";
 import SelectTip from "../SelectTip/SelectTip";
 import Persons from "../Persons/Persons";
 
-const Input = ({changeBill, numberOfPerson, tipRateSelected,personHandler,removeValueBill,removeValuePerson,selectedTipsCustom,removeValueCustom }) => {
+const Input = ({changeBill, numberOfPerson, tipRateSelected,personHandler,removeValueBill,removeValuePerson,selectedTipsCustom,removeValueCustom,removeSelectedTip }) => {
 
     return(
         <div className="Input">
@@ -12,7 +12,8 @@ const Input = ({changeBill, numberOfPerson, tipRateSelected,personHandler,remove
             
             <SelectTip tipRateSelected={tipRateSelected} 
                        selectedTipsCustom  = {selectedTipsCustom} 
-                       removeValueCustom ={removeValueCustom} />
+                       removeValueCustom ={removeValueCustom} 
+                       removeSelectedTip = {removeSelectedTip}/>
             
             <Persons personHandler= {personHandler} 
                      removeValuePerson = {removeValuePerson}

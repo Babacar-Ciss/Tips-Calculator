@@ -9,6 +9,7 @@ export const TotalPerPersonContext = createContext();
 function App() {
   let totalAmount = 0; 
   let totalPerPerson =0;
+  let cur ;
 
   const  [valueBill, setValueBill] = useState("");
   const  [rate, setRate] = useState(0);
@@ -16,23 +17,32 @@ function App() {
   const  [selectedTipsCustom, setselectedTipsCustom] = useState("");
   
   const tipValueHandle = (e) => {
+    e.preventDefault()
+    console.log(cur)
     setRate(e.target.firstChild.data);
+    cur = e.target.firstChild;
+    console.log(cur)
     setselectedTipsCustom(" ");
   }
+  
 
   const AmountUpdater = (e) => {
+    e.preventDefault();
     setValueBill(e.target.value)
   }
 
   const numberOfPersonHandler = (e) => {
+    e.preventDefault()
     setNumberOfPerson(e.target.value)
   }
 
   const selectedTipsCustomHandler = (e) => {
+    e.preventDefault()
     setselectedTipsCustom(e.target.value)
     setRate(" ");
   }
 
+  
 
   const resetState = () => {
     setNumberOfPerson(0);
@@ -47,7 +57,8 @@ function App() {
     totalAmount =  (valueBill * (rate|selectedTipsCustom) * 0.01).toFixed(2);
     totalPerPerson = (totalAmount / numberOfPerson).toFixed(2)
   }
-  
+
+
   return (
     <div>
 
@@ -57,6 +68,7 @@ function App() {
       <div className="App">
         <Input changeBill={AmountUpdater} 
                tipRateSelected={tipValueHandle}
+               currentValue = {cur}
                personHandler = {numberOfPersonHandler}
                removeValueBill = {valueBill}
                removeValuePerson = {numberOfPerson}

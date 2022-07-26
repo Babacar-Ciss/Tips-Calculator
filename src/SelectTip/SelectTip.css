@@ -37,6 +37,8 @@
 }
 
 .selecttip-custom::placeholder {
+    font-family: "Space Mono";
+    color: #2a3232;
     text-align: center;
 }
 
